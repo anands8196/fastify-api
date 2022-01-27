@@ -4,7 +4,6 @@ module.exports = {
   //# create a note
   create: async (request, reply) => {
     try {
-      console.log('djdj', request.body);
       const note = request.body;
       const newNote = await Note.create(note);
       reply.code(201).send(newNote);
